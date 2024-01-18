@@ -1,0 +1,188 @@
+  /* styles Marketplace */
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #e60000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  header nav ul li {
+    margin: 0 10px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  header .publish-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+  }
+  
+  .category-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .category-cards .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .category-cards .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .category-cards .card p {
+    margin: 0;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .category-cards .card button {
+    background-color: #e60000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .annonce-container {
+    background-color: transparent;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .annonce-container .annonce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .annonce-container .annonce h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .annonce-container .annonce .price {
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .annonce-container .annonce .details-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .annonce-container .annonce .details-button:hover {
+    background-color: #0056b3;
+  }
+
+  .annonce-container .annonce h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .annonce-container .annonce .price {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .annonce-container .annonce .details-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .annonce-container .annonce img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+
+  .card {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer {
+    background-color: #e60000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
