@@ -65,22 +65,29 @@ class OfferController extends Controller
         return view('offer');
     }
 
-    public function marketplace()
+    public function marketplace($category = null)
     {
-        $offers = Offer::all(); // Retrieve or get all offers
-
+        if ($category) {
+            $offers = Offer::where('category', $category)->get();
+        } else {
+            $offers = Offer::all(); // Retrieve or get all offers
+        }
+    
         $users = User::all(); // Retrieve or get all users
-
+    
         return view('marketplace', ['offers' => $offers, 'users' => $users])->with('success', 'Offers & Users retrieved successfully');
     }
 
-    public function product()
+    public function show($id)
     {
-        $offers = Offer::all();
+        $offer = Offer::find($id);
+        $user = User::find($offer->user_id);
 
-        $users = User::all(); // Retrieve or get all users
-
-        return view('product', ['offers' => $offers, 'users' => $users])->with('success', 'Offers retrieved successfully');
+        if ($offer) {
+            return view('annonce', ['offer' => $offer, 'user' => $user])->with('success', 'Offer retrieved successfully');
+        } else {
+            return redirect()->route('marketplace')->with('error', 'Offer not found');
+        }
     }
 
 }

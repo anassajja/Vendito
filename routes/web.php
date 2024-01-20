@@ -19,17 +19,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [OfferController::class, 'marketplace'])->name('marketplace');
 
+Route::get('/marketplace/{category?}', [OfferController::class, 'marketplace'])->name('marketplace');
+
 Route::get('/publier_annonce', [OfferController::class, 'create'])->name('offer');
 
-Route::get('/product/{id}', [OfferController::class, 'product'])->name('product');
+Route::get('/annonce/{id}', [OfferController::class, 'show'])->name('annonce');
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
 
 Route::get('/login', function () {
     return view('login');
@@ -58,4 +58,3 @@ Route::post('/publier_annonce', [OfferController::class, 'store'])->name('offer'
 Route::post('/password_reset', [LoginController::class, 'reset_password'])->name('password_reset');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact');
-

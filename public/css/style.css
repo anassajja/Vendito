@@ -151,22 +151,12 @@
     font-weight: bold;
   }
   
-  .annonce-container .annonce .details-button {
-    background-color: #007bff;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
   .annonce-container .annonce img {
     width: 50%;
     height: auto;
     margin: 0 auto;
     display: block;
   }
-
 
   .card {
     border-radius: 5px;

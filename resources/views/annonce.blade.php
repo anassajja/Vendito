@@ -17,11 +17,12 @@
     </div>
 @endif
 <header>
-    <a href="" class="logo">
+    <a href="{{ route('marketplace')}}" class="logo">
         <img src="{{ asset('images/logo.png') }}" alt="Your Logo">
     </a>
     <nav>
         <ul>
+            <li><a href="{{ route('marketplace')}}">Accueil</a></li>
             <li><a href="{{ asset('about')}}">A propos</a></li>
             <li><a href="{{ asset('contact')}}">Contact</a></li>
             @if(Auth::check())
@@ -37,9 +38,8 @@
 
 </header>
 
-    <div class="annonce-container">
-        <!-- Annonces go here -->
-        @foreach ($offers as $offer)
+<h2 style="text-align: center;">Annonce details:</h2>
+    <div class="annonce-container" style="display: flex; justify-content: center; align-items: center;">
         <div class="annonce">
             <h3>Details du Produit {{ $offer->title }}</h3>
             <img src="{{ asset('images/' . $offer->image_path) }}" alt="Offer Image" class="offer-image">
@@ -62,9 +62,7 @@
                 <p>No user associated with this offer</p>
             @endif
         </div>
-    @endforeach
     </div>
-</div>
 <footer>
     <!-- Réseaux sociaux -->
     <div class="social-icons">

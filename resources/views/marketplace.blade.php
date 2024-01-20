@@ -17,11 +17,12 @@
     </div>
 @endif
 <header>
-    <a href="" class="logo">
+    <a href="{{ route('marketplace')}}" class="logo">
         <img src="{{ asset('images/logo.png') }}" alt="Your Logo">
     </a>
     <nav>
         <ul>
+            <li><a href="{{ route('marketplace')}}">Accueil</a></li>
             <li><a href="{{ route('about')}}">A propos</a></li>
             <li><a href="{{ route('contact')}}">Contact</a></li>
             @if(Auth::check())
@@ -37,62 +38,65 @@
 
 </header>
     <div class="container">
-        <h2>Que cherchez-vous ?</h2>
+        <h2 style="text-align: center;">Que cherchez-vous ?</h2>
         <div class="category-cards" style="display: flex; width: 100%; height: auto; background-color: transparent;">
             <!-- Category Cards go here -->
             <div class="card" style="background-color: red;">
-                <i class="fas fa-home"></i>
+                <a href="{{ route('marketplace', ['category' => 'Vêtements']) }}"><i class="fas fa-tshirt"></i></a>
+                <h4>Vêtements</h4>
+            </div>
+            <div class="card" style="background-color: red;">
+                <a href="{{ route('marketplace', ['category' => 'Immobilier']) }}"><i class="fas fa-home"></i></a>
                 <h4>Immobilier</h4>
             </div>
             <div class="card" style="background-color: blue;">
-                <i class="fas fa-car"></i>
+                <a href="{{ route('marketplace', ['category' => 'Automobile']) }}"><i class="fas fa-car"></i></a>
                 <h4>Automobile</h4>
             </div>
             <div class="card" style="background-color: green;">
-                <i class="fas fa-mobile-alt"></i>
+                <a href="{{ route('marketplace', ['category' => 'Électronique']) }}"><i class="fas fa-mobile-alt"></i></a>
                 <h4>Électronique</h4>
             </div>
             <div class="card" style="background-color: yellow;">
-                <i class="fas fa-book"></i>
+                <a href="{{ route('marketplace', ['category' => 'Livres']) }}"><i class="fas fa-book"></i></a>
                 <h4>Livres</h4>
             </div>
             <div class="card" style="background-color: orange;">
-                <i class="fas fa-gamepad"></i>
+                <a href="{{ route('marketplace', ['category' => 'Jeux vidéo']) }}"><i class="fas fa-gamepad"></i></a>
                 <h4>Jeux vidéo</h4>
             </div>
             <div class="card" style="background-color: purple;">
-                <i class="fas fa-bicycle"></i>
+                <a href="{{ route('marketplace', ['category' => 'Sports et loisirs']) }}"><i class="fas fa-bicycle"></i></a>
                 <h4>Sports et loisirs</h4>
             </div>
             <div class="card" style="background-color: pink;">
-                <i class="fas fa-paw"></i>
+                <a href="{{ route('marketplace', ['category' => 'Animaux']) }}"><i class="fas fa-paw"></i></a>
                 <h4>Animaux</h4>
             </div>
             <div class="card" style="background-color: brown;">
-                <i class="fas fa-motorcycle"></i>
+                <a href="{{ route('marketplace', ['category' => 'Motos']) }}"><i class="fas fa-motorcycle"></i></a>
                 <h4>Motos</h4>
             </div>
             <div class="card" style="background-color: gray;">
-                <i class="fas fa-ellipsis-h"></i>
+                <a href="{{ route('marketplace', ['category' => 'Autres']) }}"><i class="fas fa-ellipsis-h"></i></a>
                 <h4>Autres</h4>
             </div>
         </div>
     </div>
 
-    <div class="annonce-container">
-        <h2>Annonces</h2>
-        <!-- Annonces go here -->
+    <h2 style="text-align: center;">Annonces</h2>
+        <div class="annonce-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
             @foreach ($offers as $offer)
-                <div class="annonce">
-                <h3>{{ $offer->title }}</h3>
-                <img src="{{ asset('images/' . $offer->image_path) }}" alt="Offer Image" class="offer-image">
-                <p>{{ $offer->description }}</p>
-                <p>{{ $offer->price }} DH</p>
-                <p>{{ $offer->user->first_name }}</p>
-                <a href="{{ route('product', ['id' => $offer->id]) }}"><button class="details-button">Plus de details</button></a>
+                <div class="annonce" style="flex: 0 0 25%; margin: 10px;">
+                    <h3>{{ $offer->title }}</h3>
+                    <img src="{{ asset('images/' . $offer->image_path) }}" alt="Offer Image" class="offer-image">
+                    <p>{{ $offer->description }}</p>
+                    <p>{{ $offer->price }} DH</p>
+                    <p>{{ $offer->user->first_name }}</p>
+                    <a href="{{ route('annonce', ['id' => $offer->id]) }}"><button class="details-button">Plus de details</button></a>
                 </div>
             @endforeach
-    </div>
+        </div>
 
       <footer>
             <!-- Réseaux sociaux -->

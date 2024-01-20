@@ -16,7 +16,7 @@
   <h1>A propos</h1>
   <p>Tout pour vous</p>
   <p>Vendito est un site web de petites annonces en ligne qui opère au Maroc, principalement dans le domaine des biens de consommation d'occasion. Fondé en 2024, Avito permet aux utilisateurs de publier gratuitement des annonces pour vendre et acheter une variété de produits tels que des vêtements, des meubles, des appareils électroniques, des véhicules, et bien d'autres.</p>
-  <a href="{{ route('marketplace') }}"><button class="button" style="background-color: transparent">Home</button></a>
+  <a href="{{ route('marketplace') }}"><button class="button" style="background-color: transparent">Acceuil</button></a>
 </div>
 
 

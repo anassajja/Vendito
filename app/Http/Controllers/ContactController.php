@@ -21,7 +21,14 @@ class ContactController extends Controller
         Contact::create($request->all()); // Create a new instance of the Contact class
 
         return redirect()->route('marketplace'); // Redirect to the marketplace page
-    } 
+    }
+    
+    public function index()
+    {
+        $contacts = Contact::all(); // Get all the contacts
+
+        return view('contact', ['contacts' => $contacts]); // Return the view with the contacts
+    }
 
     public function destroy(Contact $contact)
     {

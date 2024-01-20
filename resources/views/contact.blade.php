@@ -23,11 +23,12 @@
         <div class="input-box">
             <label>Sujet</label>
           <input type="text" name="subject" placeholder="Sujet" required />
+        </div>
         <div class="input-box">
             <label>Message</label>
-            <textarea placeholder="Entrer votre message"></textarea>
+            <textarea name="message" placeholder="Entrer votre message" required></textarea>
         </div>
-        <button>Envoyer</button>
+        <button type="submit">Envoyer</button>
       </form>
     </section>
   </body>
