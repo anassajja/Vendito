@@ -46,7 +46,6 @@
             <p>{{ $offer->category }}</p>
             <p>{{ $offer->description }}</p>
             <p>{{ $offer->brand }}</p>
-            <p>{{ $offer->model }}</p>
             <p>{{ $offer->condition }}</p>
             <p>{{ $offer->delivery }}</p>
             <p>{{ $offer->payment }}</p>

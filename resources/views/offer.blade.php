@@ -51,9 +51,16 @@
                   <option value="Autre">Autre</option>
                 </select>
         </div>
-        <div class="input-box">
-            <label>Adresse d'article <span style="color: red">*</span></label>
-            <input type="text" name="location" placeholder="Entrer votre article adresse" required />
+        <label>Ville <span style="color: red">*</span></label>
+        <div class="select-box">
+          <select name="location">
+            <option hidden value="Ville">Ville</option>
+            <option value="Rabat">Rabat</option>
+            <option value="Casablanca">Casablanca</option>
+            <option value="Marrakech">Marrakech</option>
+            <option value="Benguerir">Benguerir</option>
+            <option value="Autre">Autre</option>
+          </select>
         </div>
         <div class="input-box">
             <label>Marque<span style="color: red">*</span></label>

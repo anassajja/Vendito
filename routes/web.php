@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [OfferController::class, 'marketplace'])->name('marketplace');
 
-Route::get('/marketplace/{category?}', [OfferController::class, 'marketplace'])->name('marketplace');
+Route::get('/marketplace/category/{category?}', [OfferController::class, 'marketplace'])->name('marketplace.category');
+Route::get('/marketplace/location/{location?}', [OfferController::class, 'marketplace'])->name('marketplace.location');
 
 Route::get('/publier_annonce', [OfferController::class, 'create'])->name('offer');
 

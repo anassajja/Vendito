@@ -64,15 +64,22 @@ class OfferController extends Controller
     {
         return view('offer');
     }
-
-    public function marketplace($category = null)
+    public function marketplace($filter = null)
     {
-        if ($category) {
-            $offers = Offer::where('category', $category)->get();
-        } else {
-            $offers = Offer::all(); // Retrieve or get all offers
+        $query = Offer::query();
+    
+        if (request()->routeIs('marketplace.category')) {
+            $query->where('category', $filter);
+        }
+
+        if (request()->routeIs('marketplace.location')) {
+            $query->where('location', $filter);
         }
     
+        // Debugging code
+       // dd($filter, $query->toSql(), $query->getBindings());
+
+        $offers = $query->get();
         $users = User::all(); // Retrieve or get all users
     
         return view('marketplace', ['offers' => $offers, 'users' => $users])->with('success', 'Offers & Users retrieved successfully');
