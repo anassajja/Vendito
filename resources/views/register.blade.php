@@ -43,7 +43,7 @@
         <div class="column">
           <div class="input-box">
             <label>Numero Telephone <span style="color: red">*</span></label>
-            <input type="number"  name="numero_telephone" placeholder="+212 x xx xx xx xx" required />
+            <input type="tel"  name="numero_telephone" required />
           </div>
           <div class="input-box">
             <label>Date naissance</label>

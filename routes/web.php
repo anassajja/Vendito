@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
+
 Route::get('/', [OfferController::class, 'marketplace'])->name('marketplace');
 
 Route::get('/marketplace/category/{category?}', [OfferController::class, 'marketplace'])->name('marketplace.category');
